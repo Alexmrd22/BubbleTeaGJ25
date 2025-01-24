@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://hcpqanxy6dww"]
+
+[node name="ConejoVaso" type="CharacterBody2D"]
