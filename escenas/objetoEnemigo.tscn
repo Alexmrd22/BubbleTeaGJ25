@@ -1,13 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://yn0s0r5wu2kv"]
+[gd_scene load_steps=3 format=3 uid="uid://yn0s0r5wu2kv"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0ujbc"]
+[ext_resource type="Texture2D" uid="uid://cy476twgx5cw" path="res://graficos/Burbuja.png" id="1_ukb12"]
 
-[node name="ObjetoEnemigo" type="Node2D"]
-editor_description = "Objetos que no se deben cojer. (Enemigos)"
-position = Vector2(53, -101)
+[sub_resource type="CircleShape2D" id="CircleShape2D_854ul"]
 
-[node name="CollisionEnemigo" type="CollisionShape2D" parent="."]
-position = Vector2(448, 360)
-shape = SubResource("CircleShape2D_0ujbc")
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(859, 497)
+scale = Vector2(0.24, 0.24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12.4997, 0.000127157)
+scale = Vector2(13, 13)
+shape = SubResource("CircleShape2D_854ul")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.16641, 0.000127157)
+texture = ExtResource("1_ukb12")
