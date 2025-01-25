@@ -1,6 +1,13 @@
-[gd_scene format=3 uid="uid://yn0s0r5wu2kv"]
+[gd_scene load_steps=2 format=3 uid="uid://yn0s0r5wu2kv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ujbc"]
 
 [node name="ObjetoEnemigo" type="Node2D"]
 editor_description = "Objetos que no se deben cojer. (Enemigos)"
+position = Vector2(53, -101)
 
 [node name="CollisionEnemigo" type="CollisionShape2D" parent="."]
+position = Vector2(448, 360)
+shape = SubResource("CircleShape2D_0ujbc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
