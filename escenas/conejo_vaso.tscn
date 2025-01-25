@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://hcpqanxy6dww"]
+[gd_scene load_steps=8 format=3 uid="uid://hcpqanxy6dww"]
 
+[ext_resource type="Script" path="res://escenas/conejo_vaso.gd" id="1_6enku"]
 [ext_resource type="Texture2D" uid="uid://c2rwifd1cjy28" path="res://graficos/IMG_3875.png" id="1_t6m0d"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qcb1e"]
-a = Vector2(61, -6)
-b = Vector2(-69, -7)
+a = Vector2(62, -6)
+b = Vector2(-70, -7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ly2os"]
 size = Vector2(12.8456, 171.883)
@@ -16,10 +17,11 @@ size = Vector2(173.799, 12.6312)
 size = Vector2(80.5, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14oe6"]
-size = Vector2(64, 78)
+size = Vector2(78, 78)
 
 [node name="ConejoVaso" type="CharacterBody2D"]
 position = Vector2(24, 17)
+script = ExtResource("1_6enku")
 
 [node name="ColisionadorBolaIntroducida" type="CollisionShape2D" parent="."]
 position = Vector2(604, 802)
@@ -38,7 +40,6 @@ shape = SubResource("RectangleShape2D_ly2os")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(655, 885)
 rotation = 1.71101
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_p3qjk")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
@@ -46,5 +47,5 @@ position = Vector2(599.75, 978)
 shape = SubResource("RectangleShape2D_8iukc")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(597, 1022)
+position = Vector2(598, 1022)
 shape = SubResource("RectangleShape2D_14oe6")
