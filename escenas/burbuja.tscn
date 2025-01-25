@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dorcfctafyb6g"]
+[gd_scene load_steps=8 format=3 uid="uid://dorcfctafyb6g"]
 
 [ext_resource type="Script" path="res://escenas/burbuja.gd" id="1_nrcr2"]
-[ext_resource type="Texture2D" uid="uid://61jxjrwfren1" path="res://graficos/Burbuja.png" id="2_ugpn8"]
+[ext_resource type="Texture2D" uid="uid://d13rq3tapwxxf" path="res://graficos/Burbuja.png" id="2_ugpn8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5p4jq"]
 radius = 31.0
@@ -20,6 +20,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
+
+[sub_resource type="Animation" id="Animation_7gq48"]
+resource_name = "explotar"
 
 [sub_resource type="Animation" id="Animation_7xch1"]
 resource_name = "giro"
@@ -41,11 +44,14 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bsp6k"]
 _data = {
 "RESET": SubResource("Animation_bpqaj"),
+"explotar": SubResource("Animation_7gq48"),
 "giro": SubResource("Animation_7xch1")
 }
 
 [node name="Burbuja" type="RigidBody2D" groups=["burbuja"]]
 position = Vector2(752, 122)
+mass = 0.5
+gravity_scale = 0.35
 script = ExtResource("1_nrcr2")
 
 [node name="Colisionador" type="CollisionShape2D" parent="."]
@@ -55,6 +61,7 @@ shape = SubResource("CircleShape2D_5p4jq")
 scale = Vector2(0.24, 0.24)
 texture = ExtResource("2_ugpn8")
 hframes = 5
+vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 libraries = {

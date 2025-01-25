@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://yn0s0r5wu2kv"]
 
-[ext_resource type="Texture2D" uid="uid://rklniyear0o6" path="res://graficos/Chorizo.png" id="1_74ppa"]
+[ext_resource type="Texture2D" uid="uid://crxnmoxd0jwy0" path="res://graficos/Chorizo.png" id="1_74ppa"]
 
 [sub_resource type="GDScript" id="GDScript_ot8xn"]
 script/source = "extends RigidBody2D
@@ -54,6 +54,8 @@ radius = 10.5313
 
 [node name="chorizoBody" type="RigidBody2D" groups=["malicies"]]
 position = Vector2(833, 151)
+mass = 0.5
+gravity_scale = 0.8
 script = SubResource("GDScript_ot8xn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

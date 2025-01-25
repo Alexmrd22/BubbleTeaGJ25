@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://hcpqanxy6dww"]
 
 [ext_resource type="Script" path="res://escenas/conejo_vaso.gd" id="1_6enku"]
-[ext_resource type="Texture2D" uid="uid://8pjl62f1sk0w" path="res://graficos/vaso_conejo.png" id="2_plaia"]
+[ext_resource type="Texture2D" uid="uid://b2av6glpmlddx" path="res://graficos/vaso_conejo.png" id="2_plaia"]
 
 [sub_resource type="Animation" id="Animation_sy181"]
 length = 0.001
@@ -66,7 +66,7 @@ size = Vector2(7.14102, 167.319)
 size = Vector2(166.801, 8.36151)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14oe6"]
-size = Vector2(70, 70)
+size = Vector2(70, 65)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_smymg"]
 a = Vector2(34, 27)
@@ -98,7 +98,7 @@ rotation = 1.71101
 shape = SubResource("RectangleShape2D_p3qjk")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(603, 989)
+position = Vector2(603, 986.5)
 shape = SubResource("RectangleShape2D_14oe6")
 
 [node name="Area2D" type="Area2D" parent="."]

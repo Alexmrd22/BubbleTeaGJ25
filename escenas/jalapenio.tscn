@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0rp4djc1coxh"]
 
 [ext_resource type="Script" path="res://escenas/jalapenio.gd" id="1_opse6"]
-[ext_resource type="Texture2D" uid="uid://butliusp08dp4" path="res://graficos/Jalapenio.png" id="2_s60y6"]
+[ext_resource type="Texture2D" uid="uid://b8b4eme1dk6af" path="res://graficos/Jalapenio.png" id="2_s60y6"]
 
 [sub_resource type="Animation" id="Animation_40k6l"]
 length = 0.001
@@ -46,6 +46,8 @@ radius = 41.0
 
 [node name="Jalapenio" type="RigidBody2D" groups=["malicies"]]
 position = Vector2(470, 289)
+mass = 0.5
+gravity_scale = 0.65
 script = ExtResource("1_opse6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

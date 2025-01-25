@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dhbjckjfqgoqn"]
 
-[ext_resource type="Texture2D" uid="uid://btjyvtwa1vn5t" path="res://graficos/RaspaPeces.png" id="1_obh7p"]
+[ext_resource type="Texture2D" uid="uid://c5xu6c85mm6ky" path="res://graficos/RaspaPeces.png" id="1_obh7p"]
 [ext_resource type="Script" path="res://escenas/raspa_pescado.gd" id="1_whdqy"]
 
 [sub_resource type="Animation" id="Animation_j5ld4"]
@@ -46,6 +46,8 @@ radius = 52.0
 
 [node name="RaspaPescado" type="RigidBody2D" groups=["malicies"]]
 position = Vector2(676, 316)
+mass = 0.5
+gravity_scale = 0.4
 script = ExtResource("1_whdqy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
