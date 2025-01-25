@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 600.0
 const JUMP_VELOCITY = -400.0
 
 
@@ -23,3 +23,10 @@ func _process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	if global_position.x < -650:
+		global_position.x = 1520
+	elif global_position.x > 1520:
+		global_position.x = -650
+		
+	

@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://4pb045avvbq2"]
+[gd_scene load_steps=6 format=3 uid="uid://4pb045avvbq2"]
+
+[ext_resource type="Script" path="res://escenas/nivel.gd" id="1_k1mvp"]
+[ext_resource type="PackedScene" uid="uid://dorcfctafyb6g" path="res://escenas/burbuja.tscn" id="1_td0dk"]
+[ext_resource type="PackedScene" path="res://escenas/chorizoEnemigo.tscn" id="2_1s3ja"]
+[ext_resource type="PackedScene" uid="uid://hcpqanxy6dww" path="res://escenas/conejo_vaso.tscn" id="3_ij0rq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h081t"]
+size = Vector2(2464, 250)
 
 [node name="Nivel" type="Node2D"]
+position = Vector2(-3, -56)
+script = ExtResource("1_k1mvp")
+
+[node name="Burbuja" parent="." instance=ExtResource("1_td0dk")]
+position = Vector2(1243, 329)
+mass = 0.2
+
+[node name="chorizoBody" parent="." instance=ExtResource("2_1s3ja")]
+position = Vector2(1058, 475)
+mass = 0.2
+
+[node name="ConejoVaso" parent="." instance=ExtResource("3_ij0rq")]
+position = Vector2(370, 77)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 1000.0
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(881, 1263)
+shape = SubResource("RectangleShape2D_h081t")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://hcpqanxy6dww"]
 
 [ext_resource type="Script" path="res://escenas/conejo_vaso.gd" id="1_6enku"]
-[ext_resource type="Texture2D" uid="uid://c2rwifd1cjy28" path="res://graficos/IMG_3875.png" id="1_t6m0d"]
+[ext_resource type="Texture2D" uid="uid://b7uew12cgxd1j" path="res://graficos/IMG_3875.png" id="1_t6m0d"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qcb1e"]
 a = Vector2(62, -6)
