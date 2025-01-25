@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="BubbleTeaGJ25"
+run/main_scene="res://escenas/burbuja.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Controlador="*res://controlador.gd"
+Controlador="*res://escenas/controlador.gd"
 
 [display]
 
