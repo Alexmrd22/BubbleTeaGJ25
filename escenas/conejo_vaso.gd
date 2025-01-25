@@ -38,3 +38,13 @@ func cambiar_animacion(nombre_anim):
 		$Sprite2D/AnimationPlayer.play(nombre_anim)
 		anim_actual = nombre_anim
 	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("burbuja"):
+		body.queue_free()
+		Controlador.aumentarPuntoSoso()
+	if body.is_in_group("malicies"):
+		body.queue_free()
+		Controlador.disminuirPuntoSoso()
+	pass # Replace with function body.

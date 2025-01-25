@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://4pb045avvbq2"]
+[gd_scene load_steps=8 format=3 uid="uid://4pb045avvbq2"]
 
 [ext_resource type="Script" path="res://escenas/nivel.gd" id="1_k1mvp"]
 [ext_resource type="PackedScene" uid="uid://dorcfctafyb6g" path="res://escenas/burbuja.tscn" id="1_td0dk"]
-[ext_resource type="PackedScene" path="res://escenas/chorizoEnemigo.tscn" id="2_1s3ja"]
+[ext_resource type="PackedScene" uid="uid://yn0s0r5wu2kv" path="res://escenas/chorizoEnemigo.tscn" id="2_1s3ja"]
 [ext_resource type="PackedScene" uid="uid://hcpqanxy6dww" path="res://escenas/conejo_vaso.tscn" id="3_ij0rq"]
+[ext_resource type="Script" path="res://escenas/mata_objetos.gd" id="5_k55lc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h081t"]
 size = Vector2(2464, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_og3ck"]
+size = Vector2(2346, 1)
 
 [node name="Nivel" type="Node2D"]
 position = Vector2(-3, -56)
@@ -21,7 +25,7 @@ position = Vector2(1058, 475)
 mass = 0.2
 
 [node name="ConejoVaso" parent="." instance=ExtResource("3_ij0rq")]
-position = Vector2(370, 77)
+position = Vector2(365, 111)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 mass = 1000.0
@@ -31,3 +35,23 @@ freeze = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(881, 1263)
 shape = SubResource("RectangleShape2D_h081t")
+
+[node name="MataObjetos" type="Area2D" parent="." groups=["area_destruccion"]]
+script = ExtResource("5_k55lc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MataObjetos"]
+position = Vector2(899, 1135.5)
+shape = SubResource("RectangleShape2D_og3ck")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 49.0
+offset_top = 27.0
+offset_right = 299.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.837681, 0.779548, 3.85046e-07, 1)
+theme_override_font_sizes/font_size = 50
+text = "Bubbles: "
+
+[connection signal="body_entered" from="MataObjetos" to="." method="_on_mata_objetos_body_entered"]

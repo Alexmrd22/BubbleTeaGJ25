@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhbjckjfqgoqn"]
 
-[node name="RaspaPescado" type="RigidBody2D"]
+[node name="RaspaPescado" type="RigidBody2D" groups=["malicies"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
