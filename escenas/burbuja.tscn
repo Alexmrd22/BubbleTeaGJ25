@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dorcfctafyb6g"]
 
 [ext_resource type="Script" path="res://escenas/burbuja.gd" id="1_nrcr2"]
-[ext_resource type="Texture2D" uid="uid://cq1svssqigrvm" path="res://graficos/Burbuja.png" id="2_ugpn8"]
+[ext_resource type="Texture2D" uid="uid://61jxjrwfren1" path="res://graficos/Burbuja.png" id="2_ugpn8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5p4jq"]
 radius = 31.0
