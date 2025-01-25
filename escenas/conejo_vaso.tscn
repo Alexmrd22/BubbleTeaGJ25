@@ -1,13 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://hcpqanxy6dww"]
-
-[ext_resource type="Texture2D" uid="uid://c2rwifd1cjy28" path="res://graficos/IMG_3875.png" id="1_t6m0d"]
+[gd_scene format=3 uid="uid://hcpqanxy6dww"]
 
 [node name="ConejoVaso" type="CharacterBody2D"]
-position = Vector2(24, 17)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(613, 876)
-scale = Vector2(0.24, 0.24)
-texture = ExtResource("1_t6m0d")

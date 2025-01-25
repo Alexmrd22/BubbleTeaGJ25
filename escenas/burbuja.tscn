@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dorcfctafyb6g"]
+
+[ext_resource type="Script" path="res://escenas/burbuja.gd" id="1_nrcr2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x7las"]
+radius = 14.0357
+
+[node name="Burbuja" type="Area2D"]
+position = Vector2(301, 160)
+script = ExtResource("1_nrcr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_x7las")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
