@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://hcpqanxy6dww"]
 
 [ext_resource type="Script" path="res://escenas/conejo_vaso.gd" id="1_6enku"]
-[ext_resource type="Texture2D" uid="uid://bxbsuqgud7gam" path="res://graficos/vaso_conejo.png" id="2_plaia"]
+[ext_resource type="Texture2D" uid="uid://5l8spetdrcl3" path="res://graficos/vaso_conejo.png" id="2_plaia"]
 
 [sub_resource type="Animation" id="Animation_sy181"]
 length = 0.001

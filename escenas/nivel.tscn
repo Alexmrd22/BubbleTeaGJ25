@@ -23,6 +23,7 @@ mass = 0.2
 [node name="chorizoBody" parent="." instance=ExtResource("2_1s3ja")]
 position = Vector2(1058, 475)
 mass = 0.2
+script = null
 
 [node name="ConejoVaso" parent="." instance=ExtResource("3_ij0rq")]
 position = Vector2(365, 111)

@@ -1,13 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://yn0s0r5wu2kv"]
 
-[ext_resource type="Script" path="res://escenas/objeto_enemigo.gd" id="1_sok3d"]
-[ext_resource type="Texture2D" uid="uid://coqv6lbjlbcoo" path="res://graficos/IMG_3877.png" id="2_7moby"]
+[ext_resource type="Texture2D" uid="uid://ctqhamctlq8q0" path="res://graficos/IMG_3877.png" id="2_7moby"]
+
+[sub_resource type="GDScript" id="GDScript_ot8xn"]
+script/source = "extends RigidBody2D
+
+# No necesitas ningún código para que funcione la gravedad básica.
+# El motor ya la maneja automáticamente.
+
+func _ready() -> void:
+	# Configura la escala de la gravedad desde el código (opcional)
+	self.gravity_scale = gravity_scale
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_854ul"]
 
 [node name="chorizoBody" type="RigidBody2D" groups=["malicies"]]
 position = Vector2(859, 497)
-script = ExtResource("1_sok3d")
+script = SubResource("GDScript_ot8xn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4.16641, 0.000127157)

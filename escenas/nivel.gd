@@ -3,7 +3,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var tamanio_viewport = get_viewport().size
 	Controlador.ruta_etiqueta_nivel = $CanvasLayer/Label
 	pass # Replace with function body.
 
