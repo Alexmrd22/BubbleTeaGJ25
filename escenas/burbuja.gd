@@ -1,15 +1,8 @@
-extends Area2D
+extends RigidBody2D
 
+# No necesitas ningún código para que funcione la gravedad básica.
+# El motor ya la maneja automáticamente.
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-# Entra en contacto con la superficie.
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	# Configura la escala de la gravedad desde el código (opcional)
+	self.gravity_scale = gravity_scale
