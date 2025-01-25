@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bjwdn42tiqts0"
+=======
+uid="uid://bk30is6ks7rpc"
+>>>>>>> f34bfaf (Añado todos los colisionadores del conejo)
 path="res://.godot/imported/Burbuja.png-6ac2e57edf5719d146a85c7fdbb5e190.ctex"
 metadata={
 "vram_texture": false
