@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://yn0s0r5wu2kv"]
+
+[node name="ObjetoEnemigo" type="Node2D"]
+editor_description = "Objetos que no se deben cojer. (Enemigos)"
+
+[node name="CollisionEnemigo" type="CollisionShape2D" parent="."]
