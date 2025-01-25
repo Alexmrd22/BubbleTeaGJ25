@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cy476twgx5cw"
+=======
+uid="uid://dgv02gs1a3ptg"
+>>>>>>> f7e574c (A)
 path="res://.godot/imported/Burbuja.png-6ac2e57edf5719d146a85c7fdbb5e190.ctex"
 metadata={
 "vram_texture": false
