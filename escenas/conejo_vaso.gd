@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 600.0
 const JUMP_VELOCITY = -400.0
+var anim_actual = "idle" # animacion actual: parado
 
 
 func _process(delta: float) -> void:
@@ -19,6 +20,9 @@ func _process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		cambiar_animacion("andando")
+		if velocity.x < 0:
+			$Sprite2D.flip_h = true
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -29,4 +33,8 @@ func _process(delta: float) -> void:
 	elif global_position.x > 1520:
 		global_position.x = -650
 		
+func cambiar_animacion(nombre_anim):
+	if nombre_anim != anim_actual:
+		$Sprite2D/AnimationPlayer.play(nombre_anim)
+		anim_actual = nombre_anim
 	

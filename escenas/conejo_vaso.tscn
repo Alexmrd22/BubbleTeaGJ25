@@ -1,51 +1,89 @@
-[gd_scene load_steps=8 format=3 uid="uid://hcpqanxy6dww"]
+[gd_scene load_steps=10 format=3 uid="uid://hcpqanxy6dww"]
 
 [ext_resource type="Script" path="res://escenas/conejo_vaso.gd" id="1_6enku"]
-[ext_resource type="Texture2D" uid="uid://b7uew12cgxd1j" path="res://graficos/IMG_3875.png" id="1_t6m0d"]
+[ext_resource type="Texture2D" uid="uid://hsqibd5mtu5o" path="res://graficos/vaso_conejo.png" id="2_plaia"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qcb1e"]
-a = Vector2(62, -6)
-b = Vector2(-70, -7)
+a = Vector2(55, -6)
+b = Vector2(-53, -7)
+
+[sub_resource type="Animation" id="Animation_m03rg"]
+resource_name = "andando"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_sy181"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jj6ah"]
+_data = {
+"RESET": SubResource("Animation_sy181"),
+"andando": SubResource("Animation_m03rg")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ly2os"]
-size = Vector2(12.8456, 171.883)
+size = Vector2(7.14102, 167.319)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3qjk"]
-size = Vector2(173.799, 12.6312)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iukc"]
-size = Vector2(80.5, 11)
+size = Vector2(166.801, 8.36151)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14oe6"]
-size = Vector2(78, 78)
+size = Vector2(70, 70)
 
 [node name="ConejoVaso" type="CharacterBody2D"]
 position = Vector2(24, 17)
 script = ExtResource("1_6enku")
 
 [node name="ColisionadorBolaIntroducida" type="CollisionShape2D" parent="."]
-position = Vector2(604, 802)
+position = Vector2(603, 818)
 shape = SubResource("SegmentShape2D_qcb1e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(613, 876)
-scale = Vector2(0.24, 0.24)
-texture = ExtResource("1_t6m0d")
+position = Vector2(613, 880)
+scale = Vector2(0.24, 0.254991)
+texture = ExtResource("2_plaia")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_jj6ah")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(544.451, 886.066)
+position = Vector2(554.844, 887.078)
 rotation = -0.118829
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ly2os")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(655, 885)
+position = Vector2(651.116, 888.691)
 rotation = 1.71101
 shape = SubResource("RectangleShape2D_p3qjk")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(599.75, 978)
-shape = SubResource("RectangleShape2D_8iukc")
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(598, 1022)
+position = Vector2(603, 989)
 shape = SubResource("RectangleShape2D_14oe6")
