@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://yn0s0r5wu2kv"]
+
+[ext_resource type="Script" path="res://escenas/objeto_enemigo.gd" id="1_sok3d"]
+[ext_resource type="Texture2D" uid="uid://dkhnrrs8ykdhl" path="res://graficos/IMG_3877.png" id="2_7moby"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_854ul"]
+
+[node name="chorizoBody" type="RigidBody2D"]
+position = Vector2(859, 497)
+script = ExtResource("1_sok3d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.16641, 0.000127157)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_7moby")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.99998, 2.00002)
+scale = Vector2(3.04, 3.08)
+shape = SubResource("CircleShape2D_854ul")
