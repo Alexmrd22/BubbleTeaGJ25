@@ -16,11 +16,25 @@ func _process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
-		cambiar_animacion("andando")	
+		if (Controlador.puntuacion <= 4):
+			cambiar_animacion("andando_vacio")
+		elif (Controlador.puntuacion <= 7):
+			cambiar_animacion("andando_bajo")
+		elif (Controlador.puntuacion <= 12):
+			cambiar_animacion("andando_medio")
+		else:
+			cambiar_animacion("andando_lleno")
 	else:
 		velocity.x = 0
-		cambiar_animacion("quieto")
-
+		if (Controlador.puntuacion <= 4):
+			cambiar_animacion("quieto_vacio")
+		elif (Controlador.puntuacion <= 7):
+			cambiar_animacion("quieto_bajo")
+		elif (Controlador.puntuacion <= 12):
+			cambiar_animacion("quieto_medio")
+		else:
+			cambiar_animacion("quieto_lleno")
+			
 	move_and_slide()
 	position.y = 110
 	
@@ -33,7 +47,7 @@ func cambiar_animacion(nombre_anim):
 	if nombre_anim != anim_actual:
 		$Sprite2D/AnimationPlayer.play(nombre_anim)
 		anim_actual = nombre_anim
-	
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("burbuja"):
 		body.queue_free()

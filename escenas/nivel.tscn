@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://escenas/nivel.gd" id="1_k1mvp"]
 [ext_resource type="PackedScene" uid="uid://hcpqanxy6dww" path="res://escenas/conejo_vaso.tscn" id="3_ij0rq"]
-[ext_resource type="FontFile" uid="uid://3y6pr6d5vfk0" path="res://graficos/Daily_Bubble.ttf" id="4_afom8"]
-[ext_resource type="Texture2D" uid="uid://dbfknxaw6kw0c" path="res://graficos/Nubecitas.png" id="4_nlgml"]
-[ext_resource type="Texture2D" uid="uid://cxxbxxcc65r16" path="res://graficos/IMG_3940.png" id="5_2wfn1"]
+[ext_resource type="FontFile" uid="uid://bp2e7k7rbyqw" path="res://graficos/Daily_Bubble.ttf" id="4_afom8"]
+[ext_resource type="Texture2D" uid="uid://bkj3uk58844mi" path="res://graficos/Nubecitas.png" id="4_nlgml"]
+[ext_resource type="Texture2D" uid="uid://pt2das3mdr4x" path="res://graficos/IMG_3940.png" id="5_2wfn1"]
 [ext_resource type="Script" path="res://escenas/mata_objetos.gd" id="5_k55lc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h081t"]
@@ -52,7 +52,7 @@ offset_bottom = 139.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_afom8")
 theme_override_font_sizes/font_size = 50
-text = "Bubbles : 0"
+text = "Bubbles: 0"
 
 [node name="Tiempo" type="Label" parent="CanvasLayer"]
 offset_left = 1610.0
@@ -62,7 +62,7 @@ offset_bottom = 134.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_afom8")
 theme_override_font_sizes/font_size = 50
-text = "Tiempo : 60"
+text = "Time: 60"
 
 [node name="Nubes" type="Sprite2D" parent="."]
 top_level = true

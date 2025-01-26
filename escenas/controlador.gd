@@ -26,9 +26,9 @@ func disminuirPuntoSoso():
 	pass
 	
 func disminuirTiempoSoso(tiempo_restante):
-	ruta_etiqueta_tiempo.text = "Tiempo: "+ str(int(tiempo_restante))
+	ruta_etiqueta_tiempo.text = "Time: "+ str(int(tiempo_restante))
 	pass
-
+	
 func goto_scene(path):
 	# This function will usually be called from a signal callback,
 	# or some other function in the current scene.
