@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://escenas/nivel.gd" id="1_k1mvp"]
 [ext_resource type="PackedScene" uid="uid://hcpqanxy6dww" path="res://escenas/conejo_vaso.tscn" id="3_ij0rq"]
-[ext_resource type="FontFile" uid="uid://3y6pr6d5vfk0" path="res://graficos/Daily_Bubble.ttf" id="4_afom8"]
-[ext_resource type="Texture2D" uid="uid://dbfknxaw6kw0c" path="res://graficos/Nubecitas.png" id="4_nlgml"]
-[ext_resource type="Texture2D" uid="uid://cxxbxxcc65r16" path="res://graficos/IMG_3940.png" id="5_2wfn1"]
+[ext_resource type="FontFile" uid="uid://bpn6ikwr8bxxd" path="res://graficos/Daily_Bubble.ttf" id="4_afom8"]
+[ext_resource type="Texture2D" uid="uid://daeue8p7lar1g" path="res://graficos/Nubecitas.png" id="4_nlgml"]
+[ext_resource type="Texture2D" uid="uid://dg1utu3pwvft8" path="res://graficos/IMG_3940.png" id="5_2wfn1"]
 [ext_resource type="Script" path="res://escenas/mata_objetos.gd" id="5_k55lc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h081t"]
