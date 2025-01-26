@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://yn0s0r5wu2kv"]
+
+[ext_resource type="Texture2D" uid="uid://crxnmoxd0jwy0" path="res://graficos/Chorizo.png" id="1_74ppa"]
+
+[sub_resource type="GDScript" id="GDScript_ot8xn"]
+script/source = "extends RigidBody2D
+
+func _ready() -> void:
+	# Configura la escala de la gravedad desde el código (opcional)
+	self.gravity_scale = gravity_scale
+	$Sprite2D/AnimationPlayer.play(\"giro\")
+"
+
+[sub_resource type="Animation" id="Animation_srmvn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_lly6b"]
+resource_name = "giro"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nsdjf"]
+_data = {
+"RESET": SubResource("Animation_srmvn"),
+"giro": SubResource("Animation_lly6b")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_854ul"]
+radius = 10.5313
+
+[node name="chorizoBody" type="RigidBody2D" groups=["malicies"]]
+position = Vector2(833, 151)
+mass = 0.5
+gravity_scale = 0.8
+script = SubResource("GDScript_ot8xn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-55, -10)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_74ppa")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_nsdjf")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-54, -10)
+scale = Vector2(3.04, 3.08)
+shape = SubResource("CircleShape2D_854ul")
