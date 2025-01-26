@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 			cambiar_animacion("quieto_medio")
 		else:
 			cambiar_animacion("quieto_lleno")
-			
+
 	move_and_slide()
 	position.y = 110
 	

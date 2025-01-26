@@ -1,4 +1,3 @@
-res://escenas/nivel.tscn
 res://escenas/conejo_vaso.tscn
-res://escenas/controlador.gd
-res://escenas/conejo_vaso.gd
+res://escenas/nivel.tscn
+res://escenas/burbuja.tscn
